@@ -1,10 +1,34 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/learning_glow.svg" width="600">
-</p>
+<svg width="100%" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
 
-<h1>STM-Learningssss</h1>
-STM32 Architecture, Firmware, BoardSCH, Compiling, ETC.
-<br><br>
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%   { fill: #00e5ff; filter: url(#glow); }
+      50%  { fill: #6fffff; filter: url(#glow); }
+      100% { fill: #00e5ff; filter: url(#glow); }
+    }
+    text {
+      animation: pulse 2.5s infinite ease-in-out;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 150px;
+      letter-spacing: 10px;
+    }
+  </style>
+
+  <text x="50%" y="55%" text-anchor="middle">LEARNING</text>
+
+</svg>
+
 
 IN STM32CubeIDE we mostly configure <tt>src/main.h</tt>, <tt>irc/main.h</tt> and <tt>.ioc</tt> File.
 <br><br>
